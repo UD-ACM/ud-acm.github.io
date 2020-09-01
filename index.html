@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACM @ UD</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Raleway:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
 <body>
-    <h1>ACM @ UD</h1>
+    <!-- navbar -->
+    <nav id="nav">
+        <div class="nav-container">
+            <h1 class="name"><a href="/">ACM @ UD</a></h1>
+            <div class="links">
+                <a href="#about">About Us</a>
+                <a href="#calendar">Calendar</a>
+                <a href="#join">Join ACM</a>
+            </div>
+        </div>
+    </nav>
+    <!-- landing screen -->
+    <div class="billboard">
+        <div id="vis"></div>
+        <div class="landing-content">
+            <h1>ACM @ UD</h1>
+            <h3>UD's premier computer science club</h3>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="section" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200">
+            <a class="anchor" id="about"></a>
+            <h1 class="header">About Us</h1>
+            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem perferendis fugiat ex eaque quia omnis fuga, repellat quas, accusamus a eligendi beatae mollitia rerum perspiciatis quasi iure at voluptatem doloremque provident autem nulla dicta! Non totam voluptatem laboriosam nostrum, hic dolor vitae, explicabo quas repudiandae obcaecati minima voluptate nisi.</p>
+        </div>
+        <div class="section" data-aos="fade-right" data-aos-duration="800" data-aos-offset="200">
+            <a class="anchor" id="calendar"></a>
+            <h1 class="header">Calendar</h1>
+            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut, unde nam quod quis et nostrum inventore molestias ratione. Ut quo quasi possimus facere voluptatem, animi eaque itaque? Possimus, autem! Deserunt obcaecati ad recusandae sed.</p>
+        </div>
+        <div class="section" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200">
+            <a class="anchor" id="join"></a>
+            <h1 class="header">Join ACM</h1>
+            <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta reprehenderit exercitationem alias commodi repellendus tempore aspernatur. Dolorem eveniet quia ut perferendis laboriosam vitae beatae vero rerum quos? Animi laboriosam in accusantium nemo corrupti exercitationem. Nam repellat cumque magnam in soluta nemo, enim praesentium molestias! Odit ea eligendi temporibus aliquid architecto consequuntur omnis eum et delectus corporis harum porro, maiores repudiandae, cumque repellat? Aspernatur, incidunt reiciendis.</p>
+        </div>
+    </div>
+
+    <footer>
+        Made by <a href="https://jinay.dev/">Jinay Jain</a>, president of UD ACM. <p>Simulation inspired by the <a href="https://p5js.org/examples/simulate-flocking.html">p5.js flocking example</a>.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+
+        window.onload = scrollFunc;
+        window.onscroll = scrollFunc;
+
+        function scrollFunc() {
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("nav").style.background = "#0E103D";
+            } else {
+                document.getElementById("nav").style.background = "none"
+            }
+        }
+
+    </script>
+    <script src="vis.js"></script>
 </body>
+
 </html>
