@@ -172,4 +172,43 @@ footer a {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
+.months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.months .month {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.months .month h2 {
+  text-align: center;
+}
+
+.months .month p {
+  font-size: 1.2rem;
+}
+
+.months .month:not(:last-child) {
+  margin-right: 20px;
+}
+
+.discord {
+  font-size: 30px;
+  text-align: center;
+}
+
+.discord a {
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.discord a:hover {
+  color: #bbbbbb;
+}
 /*# sourceMappingURL=styles.css.map */

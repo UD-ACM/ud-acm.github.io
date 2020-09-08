@@ -9,7 +9,8 @@
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    </head>
+    <script src="https://kit.fontawesome.com/077e61081a.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
     <!-- navbar -->
@@ -38,26 +39,73 @@
         <div class="section" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200">
             <a class="anchor" id="about"></a>
             <h1 class="header">About Us</h1>
-            <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem perferendis fugiat ex eaque quia omnis fuga, repellat quas, accusamus a eligendi beatae mollitia rerum perspiciatis quasi iure at voluptatem doloremque provident autem nulla dicta! Non totam voluptatem laboriosam nostrum, hic dolor vitae, explicabo quas repudiandae obcaecati minima voluptate nisi.</p>
+            <p class="content">
+                The <a href="https://www.acm.org/">Association for Computing Machinery (ACM)</a> is the largest network
+                of computer
+                scientists in the world, with over 100,000 student and professional members. ACM@UD is the University of
+                Delaware's
+                part of this worldwide network. We're open to <em>anyone</em> with an interest in computer science at
+                UD, no matter
+                your skill level. In our meetings, you'll learn about the best parts of CS while meeting people in the
+                process. From
+                artificial intelligence to cybersecurity, we cover a broad range of topics geared towards beginners and
+                experts alike.
+            </p>
         </div>
         <div class="section" data-aos="fade-right" data-aos-duration="800" data-aos-offset="200">
             <a class="anchor" id="calendar"></a>
             <h1 class="header">Calendar</h1>
-            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut, unde nam quod quis et nostrum inventore molestias ratione. Ut quo quasi possimus facere voluptatem, animi eaque itaque? Possimus, autem! Deserunt obcaecati ad recusandae sed.</p>
+            <p class="content">
+                We hold our meetings on <u><b>Wednesdays at 7pm</b></u> on Zoom, but we will record them for those who
+                can't make it. On presentation nights, we'll be learning about interesting topics in CS. On community nights, we
+                play games like Jackbox and Skribbl.io.
+            <div class="months">
+                <div class="month" data-aos="fade-up" data-aos-duration="800">
+                    <h2>September</h2>
+                    <hr>
+                    <p>2: Welcome Back Meeting</p>
+                    <p>9: BC: Before C Presentation</p>
+                    <p>16: Community Night</p>
+                    <p>23: Competitive Programmming</p>
+                    <p>30: Community Night</p>
+                </div>
+                <div class="month" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h2>October</h2>
+                    <hr>
+                    <p>7: Machine Learning</p>
+                    <p>14: Community Night</p>
+                    <p>21: HTTPS</p>
+                    <p>28: Community Night</p>
+                </div>
+                <div class="month" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                    <h2>November</h2>
+                    <hr>
+                    <p>4: Interview Prep</p>
+                    <p>11: Community Night</p>
+                    <p>18: Presentation</p>
+                </div>
+            </div>
+            </p>
         </div>
         <div class="section" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200">
             <a class="anchor" id="join"></a>
             <h1 class="header">Join ACM</h1>
-            <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta reprehenderit exercitationem alias commodi repellendus tempore aspernatur. Dolorem eveniet quia ut perferendis laboriosam vitae beatae vero rerum quos? Animi laboriosam in accusantium nemo corrupti exercitationem. Nam repellat cumque magnam in soluta nemo, enim praesentium molestias! Odit ea eligendi temporibus aliquid architecto consequuntur omnis eum et delectus corporis harum porro, maiores repudiandae, cumque repellat? Aspernatur, incidunt reiciendis.</p>
+            <p class="content">Interested? Join our community server to receive updates about meetings and events!</p>
+            <p class="discord">
+                <a href="https://discord.gg/Mq5RQfs"><i class="fab fa-discord"></i> Join our Discord server!</a>
+            </p>
         </div>
     </div>
 
     <footer>
-        Made by <a href="https://jinay.dev/">Jinay Jain</a>, president of UD ACM. <p>Simulation inspired by the <a href="https://p5js.org/examples/simulate-flocking.html">p5.js flocking example</a>.</p>
+        Made by <a href="https://jinay.dev/">Jinay Jain</a>, president of UD ACM. <p>Simulation inspired by the <a
+                href="https://p5js.org/examples/simulate-flocking.html">p5.js flocking example</a>.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"
+        integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA=="
+        crossorigin="anonymous"></script>
     <script>
         AOS.init();
 
@@ -65,7 +113,7 @@
         window.onscroll = scrollFunc;
 
         function scrollFunc() {
-            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 document.getElementById("nav").style.background = "#0E103D";
             } else {
                 document.getElementById("nav").style.background = "none"

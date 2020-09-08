@@ -157,3 +157,35 @@ footer {
         line-height: 2rem;
     }
 }
+
+.months {
+    display: flex;
+
+    .month {
+        flex: 1;
+        
+        h2 {
+            text-align: center;
+        }
+
+        p  {
+            font-size: 1.2rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.discord {
+    font-size: 30px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+            color: #bbbbbb;
+        }
+    }
+}
