@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  background: #0E103D;
+  background: #0e103d;
 }
 
 body * {
@@ -177,6 +177,12 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .months {
+    display: block;
+  }
 }
 
 .months .month {
