@@ -1,0 +1,45 @@
+.container {
+  max-width: 1000px;
+  padding: 0 10px;
+}
+
+.container section .header {
+  margin: 1em auto;
+  font-size: 1.8rem;
+}
+
+.container section h2,
+.container section h3 {
+  margin-top: 1.5em;
+  font-weight: 500;
+}
+
+.container section p,
+.container section li {
+  font-size: 1.2rem;
+}
+
+.container section p {
+  text-indent: 2rem;
+  line-height: 1.3em;
+}
+
+.container section li {
+  margin-bottom: 1em;
+}
+
+.heading {
+  text-align: center;
+  position: relative;
+  margin: 5rem auto;
+}
+
+.heading .title {
+  font-size: 2.5rem;
+}
+
+.heading .author {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/*# sourceMappingURL=post.css.map */

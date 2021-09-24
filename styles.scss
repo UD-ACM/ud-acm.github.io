@@ -4,11 +4,19 @@ $select: #272b74;
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   margin: 0;
-  background: $bg;
+  padding: 0;
+  background: rgb(55, 110, 120);
+  background: linear-gradient(
+      243deg,
+      rgba(55, 110, 120, 1) 0%,
+      rgba(14, 16, 61, 1) 60%
+    )
+    fixed;
 }
 
 body * {
@@ -90,17 +98,18 @@ footer {
   top: -6rem;
 }
 
+#vis {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  opacity: 0.5;
+  z-index: -100;
+}
+
 .billboard {
   height: 100vh;
   position: relative;
-
-  #vis {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.5;
-    z-index: -100;
-  }
 
   .landing-content {
     padding: 20px;

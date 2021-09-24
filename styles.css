@@ -1,10 +1,13 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   margin: 0;
-  background: #0e103d;
+  padding: 0;
+  background: #376e78;
+  background: linear-gradient(243deg, #376e78 0%, #0e103d 60%) fixed;
 }
 
 body * {
@@ -99,17 +102,18 @@ footer a {
   top: -6rem;
 }
 
-.billboard {
-  height: 100vh;
-  position: relative;
-}
-
-.billboard #vis {
+#vis {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
   opacity: 0.5;
   z-index: -100;
+}
+
+.billboard {
+  height: 100vh;
+  position: relative;
 }
 
 .billboard .landing-content {

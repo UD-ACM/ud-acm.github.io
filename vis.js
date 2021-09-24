@@ -3,6 +3,7 @@ var w = document.getElementById("vis").clientWidth;
 var h = document.getElementById("vis").clientHeight;
 
 let flock;
+let mouseRadius = 50;
 
 function setup() {
   canvas = createCanvas(w, h);
@@ -18,7 +19,14 @@ function setup() {
 
 function draw() {
   background("#0E103D");
+
+  fill(255, 255, 255, 12);
+  stroke(255, 255, 255, 100);
+  strokeWeight(1);
+  ellipse(mouseX, mouseY, mouseRadius * 2, mouseRadius * 2);
+
   flock.run();
+
 }
 
 // // Add a new boid into the System
@@ -81,6 +89,7 @@ Boid.prototype.flock = function(boids) {
   let sep = this.separate(boids);   // Separation
   let ali = this.align(boids);      // Alignment
   let coh = this.cohesion(boids);   // Cohesion
+  let mous = this.avoidMouse();     // Mouse
   // Arbitrarily weight these forces
   sep.mult(1.5);
   ali.mult(1.0);
@@ -89,6 +98,7 @@ Boid.prototype.flock = function(boids) {
   this.applyForce(sep);
   this.applyForce(ali);
   this.applyForce(coh);
+  this.applyForce(mous);
 }
 
 // Method to update location
@@ -215,6 +225,21 @@ Boid.prototype.cohesion = function(boids) {
   if (count > 0) {
     sum.div(count);
     return this.seek(sum);  // Steer towards the location
+  } else {
+    return createVector(0, 0);
+  }
+}
+
+Boid.prototype.avoidMouse = function() {
+  let mouse = createVector(mouseX, mouseY);
+  if(mouse.dist(this.position) < mouseRadius) {
+    let away = p5.Vector.sub(this.position, mouse);
+
+    away.setMag( mouseRadius / away.mag());
+
+    away.limit(this.maxspeed);
+
+    return away;
   } else {
     return createVector(0, 0);
   }
